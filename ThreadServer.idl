@@ -1,0 +1,20 @@
+// ThreadServer.idl : IDL source for ThreadServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ThreadServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(521B169D-0796-4FE7-80D0-FE0557715FB4),
+	version(1.0),
+	helpstring("ThreadServer 1.0 Type Library")
+]
+library THREADSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

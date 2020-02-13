@@ -1,0 +1,94 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (7eea65c2).
+//
+// CompServer.tlh
+//
+// C++ source equivalent of Win32 type library CompServer.dll
+// compiler-generated file created 03/31/04 at 21:30:37 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace CompServer {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("56c45cc6-a278-4a83-bd20-6fc6349c43eb"))
+/* dual interface */ _clsMonta;
+struct /* coclass */ clsMonta;
+struct __declspec(uuid("da471a71-a8bf-49f0-b3bb-9c7a2ebe827e"))
+/* dual interface */ _clsCallerObj;
+struct /* coclass */ clsCallerObj;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_clsMonta, __uuidof(_clsMonta));
+_COM_SMARTPTR_TYPEDEF(_clsCallerObj, __uuidof(_clsCallerObj));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("56c45cc6-a278-4a83-bd20-6fc6349c43eb"))
+_clsMonta : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t ChamaComponentes (
+        _bstr_t strCodPreEnvio,
+        long mIndexThreadServer,
+        struct _clsCallerObj * objCaller );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_ChamaComponentes (
+        BSTR strCodPreEnvio,
+        long mIndexThreadServer,
+        struct _clsCallerObj * objCaller,
+        VARIANT * _arg4 ) = 0;
+};
+
+struct __declspec(uuid("40621093-404c-4870-8f83-9f48addb0b20"))
+clsMonta;
+    // [ default ] interface _clsMonta
+
+struct __declspec(uuid("da471a71-a8bf-49f0-b3bb-9c7a2ebe827e"))
+_clsCallerObj : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Done (
+        long * sIndexThreadServerLivre );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Done (
+        long * sIndexThreadServerLivre ) = 0;
+};
+
+struct __declspec(uuid("1786aa05-ee3d-403d-abdc-16fd0b7574ca"))
+clsCallerObj;
+    // [ default ] interface _clsCallerObj
+
+//
+// Wrapper method implementations
+//
+
+#include "CompServer.tli"
+
+} // namespace CompServer
+
+#pragma pack(pop)
